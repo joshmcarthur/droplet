@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AWS_ACCESS_KEY_ID</key>
+	<string>$(AWS_ACCESS_KEY_ID)</string>
+	<key>AWS_BUCKET_NAME</key>
+	<string>$(AWS_BUCKET_NAME)</string>
+	<key>AWS_SECRET_ACCESS_KEY</key>
+	<string>$(AWS_SECRET_ACCESS_KEY)</string>
+	<key>LSUIElement</key>
+	<true/>
+</dict>
+</plist>

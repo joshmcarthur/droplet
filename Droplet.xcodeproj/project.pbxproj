@@ -1,0 +1,653 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0306854B2739D53E00D4509D /* DropletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306854A2739D53E00D4509D /* DropletApp.swift */; };
+		0306854D2739D53E00D4509D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306854C2739D53E00D4509D /* ContentView.swift */; };
+		0306854F2739D53F00D4509D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0306854E2739D53F00D4509D /* Assets.xcassets */; };
+		030685522739D53F00D4509D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030685512739D53F00D4509D /* Preview Assets.xcassets */; };
+		0306855D2739D53F00D4509D /* DropletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306855C2739D53F00D4509D /* DropletTests.swift */; };
+		030685672739D53F00D4509D /* DropletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030685662739D53F00D4509D /* DropletUITests.swift */; };
+		030685692739D53F00D4509D /* DropletUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030685682739D53F00D4509D /* DropletUITestsLaunchTests.swift */; };
+		030685762739DA0300D4509D /* DropletAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030685752739DA0300D4509D /* DropletAppDelegate.swift */; };
+		031EBBBD273A5C0A00E01E12 /* DropletDropDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031EBBBC273A5C0A00E01E12 /* DropletDropDelegate.swift */; };
+		031EBBC0273A5EE700E01E12 /* SotoS3 in Frameworks */ = {isa = PBXBuildFile; productRef = 031EBBBF273A5EE700E01E12 /* SotoS3 */; };
+		031EBBC2273A603600E01E12 /* DropletAwsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031EBBC1273A603600E01E12 /* DropletAwsClient.swift */; };
+		031EBBC4273A728300E01E12 /* MimeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031EBBC3273A728300E01E12 /* MimeType.swift */; };
+		031EBBC6273A747D00E01E12 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 031EBBC5273A747D00E01E12 /* Config.xcconfig */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		030685592739D53F00D4509D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0306853F2739D53E00D4509D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 030685462739D53E00D4509D;
+			remoteInfo = Droplet;
+		};
+		030685632739D53F00D4509D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0306853F2739D53E00D4509D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 030685462739D53E00D4509D;
+			remoteInfo = Droplet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		030685472739D53E00D4509D /* Droplet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Droplet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0306854A2739D53E00D4509D /* DropletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropletApp.swift; sourceTree = "<group>"; };
+		0306854C2739D53E00D4509D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0306854E2739D53F00D4509D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		030685512739D53F00D4509D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		030685532739D53F00D4509D /* Droplet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Droplet.entitlements; sourceTree = "<group>"; };
+		030685582739D53F00D4509D /* DropletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DropletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0306855C2739D53F00D4509D /* DropletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropletTests.swift; sourceTree = "<group>"; };
+		030685622739D53F00D4509D /* DropletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DropletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		030685662739D53F00D4509D /* DropletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropletUITests.swift; sourceTree = "<group>"; };
+		030685682739D53F00D4509D /* DropletUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropletUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		030685752739DA0300D4509D /* DropletAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropletAppDelegate.swift; sourceTree = "<group>"; };
+		031EBBB8273A3CEB00E01E12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		031EBBBC273A5C0A00E01E12 /* DropletDropDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropletDropDelegate.swift; sourceTree = "<group>"; };
+		031EBBC1273A603600E01E12 /* DropletAwsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropletAwsClient.swift; sourceTree = "<group>"; };
+		031EBBC3273A728300E01E12 /* MimeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MimeType.swift; sourceTree = "<group>"; };
+		031EBBC5273A747D00E01E12 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		030685442739D53E00D4509D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				031EBBC0273A5EE700E01E12 /* SotoS3 in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		030685552739D53F00D4509D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0306855F2739D53F00D4509D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0306853E2739D53E00D4509D = {
+			isa = PBXGroup;
+			children = (
+				031EBBC5273A747D00E01E12 /* Config.xcconfig */,
+				030685492739D53E00D4509D /* Droplet */,
+				0306855B2739D53F00D4509D /* DropletTests */,
+				030685652739D53F00D4509D /* DropletUITests */,
+				030685482739D53E00D4509D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		030685482739D53E00D4509D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				030685472739D53E00D4509D /* Droplet.app */,
+				030685582739D53F00D4509D /* DropletTests.xctest */,
+				030685622739D53F00D4509D /* DropletUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		030685492739D53E00D4509D /* Droplet */ = {
+			isa = PBXGroup;
+			children = (
+				031EBBB8273A3CEB00E01E12 /* Info.plist */,
+				0306854A2739D53E00D4509D /* DropletApp.swift */,
+				030685752739DA0300D4509D /* DropletAppDelegate.swift */,
+				031EBBC3273A728300E01E12 /* MimeType.swift */,
+				031EBBC1273A603600E01E12 /* DropletAwsClient.swift */,
+				031EBBBC273A5C0A00E01E12 /* DropletDropDelegate.swift */,
+				0306854C2739D53E00D4509D /* ContentView.swift */,
+				0306854E2739D53F00D4509D /* Assets.xcassets */,
+				030685502739D53F00D4509D /* Preview Content */,
+				030685532739D53F00D4509D /* Droplet.entitlements */,
+			);
+			path = Droplet;
+			sourceTree = "<group>";
+		};
+		030685502739D53F00D4509D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				030685512739D53F00D4509D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0306855B2739D53F00D4509D /* DropletTests */ = {
+			isa = PBXGroup;
+			children = (
+				0306855C2739D53F00D4509D /* DropletTests.swift */,
+			);
+			path = DropletTests;
+			sourceTree = "<group>";
+		};
+		030685652739D53F00D4509D /* DropletUITests */ = {
+			isa = PBXGroup;
+			children = (
+				030685662739D53F00D4509D /* DropletUITests.swift */,
+				030685682739D53F00D4509D /* DropletUITestsLaunchTests.swift */,
+			);
+			path = DropletUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		030685462739D53E00D4509D /* Droplet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0306856C2739D53F00D4509D /* Build configuration list for PBXNativeTarget "Droplet" */;
+			buildPhases = (
+				030685432739D53E00D4509D /* Sources */,
+				030685442739D53E00D4509D /* Frameworks */,
+				030685452739D53E00D4509D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Droplet;
+			packageProductDependencies = (
+				031EBBBF273A5EE700E01E12 /* SotoS3 */,
+			);
+			productName = Droplet;
+			productReference = 030685472739D53E00D4509D /* Droplet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		030685572739D53F00D4509D /* DropletTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0306856F2739D53F00D4509D /* Build configuration list for PBXNativeTarget "DropletTests" */;
+			buildPhases = (
+				030685542739D53F00D4509D /* Sources */,
+				030685552739D53F00D4509D /* Frameworks */,
+				030685562739D53F00D4509D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0306855A2739D53F00D4509D /* PBXTargetDependency */,
+			);
+			name = DropletTests;
+			productName = DropletTests;
+			productReference = 030685582739D53F00D4509D /* DropletTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		030685612739D53F00D4509D /* DropletUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 030685722739D53F00D4509D /* Build configuration list for PBXNativeTarget "DropletUITests" */;
+			buildPhases = (
+				0306855E2739D53F00D4509D /* Sources */,
+				0306855F2739D53F00D4509D /* Frameworks */,
+				030685602739D53F00D4509D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				030685642739D53F00D4509D /* PBXTargetDependency */,
+			);
+			name = DropletUITests;
+			productName = DropletUITests;
+			productReference = 030685622739D53F00D4509D /* DropletUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0306853F2739D53E00D4509D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					030685462739D53E00D4509D = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					030685572739D53F00D4509D = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 030685462739D53E00D4509D;
+					};
+					030685612739D53F00D4509D = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 030685462739D53E00D4509D;
+					};
+				};
+			};
+			buildConfigurationList = 030685422739D53E00D4509D /* Build configuration list for PBXProject "Droplet" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0306853E2739D53E00D4509D;
+			packageReferences = (
+				031EBBBE273A5EE700E01E12 /* XCRemoteSwiftPackageReference "soto" */,
+			);
+			productRefGroup = 030685482739D53E00D4509D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				030685462739D53E00D4509D /* Droplet */,
+				030685572739D53F00D4509D /* DropletTests */,
+				030685612739D53F00D4509D /* DropletUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		030685452739D53E00D4509D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				030685522739D53F00D4509D /* Preview Assets.xcassets in Resources */,
+				031EBBC6273A747D00E01E12 /* Config.xcconfig in Resources */,
+				0306854F2739D53F00D4509D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		030685562739D53F00D4509D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		030685602739D53F00D4509D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		030685432739D53E00D4509D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0306854D2739D53E00D4509D /* ContentView.swift in Sources */,
+				0306854B2739D53E00D4509D /* DropletApp.swift in Sources */,
+				031EBBBD273A5C0A00E01E12 /* DropletDropDelegate.swift in Sources */,
+				031EBBC2273A603600E01E12 /* DropletAwsClient.swift in Sources */,
+				030685762739DA0300D4509D /* DropletAppDelegate.swift in Sources */,
+				031EBBC4273A728300E01E12 /* MimeType.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		030685542739D53F00D4509D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0306855D2739D53F00D4509D /* DropletTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0306855E2739D53F00D4509D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				030685672739D53F00D4509D /* DropletUITests.swift in Sources */,
+				030685692739D53F00D4509D /* DropletUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0306855A2739D53F00D4509D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 030685462739D53E00D4509D /* Droplet */;
+			targetProxy = 030685592739D53F00D4509D /* PBXContainerItemProxy */;
+		};
+		030685642739D53F00D4509D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 030685462739D53E00D4509D /* Droplet */;
+			targetProxy = 030685632739D53F00D4509D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0306856A2739D53F00D4509D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 031EBBC5273A747D00E01E12 /* Config.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0306856B2739D53F00D4509D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		0306856D2739D53F00D4509D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Droplet/Droplet.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Droplet/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Droplet/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joshmcarthur.droplet.Droplet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		0306856E2739D53F00D4509D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Droplet/Droplet.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Droplet/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Droplet/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joshmcarthur.droplet.Droplet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		030685702739D53F00D4509D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joshmcarthur.droplet.DropletTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Droplet.app/Contents/MacOS/Droplet";
+			};
+			name = Debug;
+		};
+		030685712739D53F00D4509D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joshmcarthur.droplet.DropletTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Droplet.app/Contents/MacOS/Droplet";
+			};
+			name = Release;
+		};
+		030685732739D53F00D4509D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joshmcarthur.droplet.DropletUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Droplet;
+			};
+			name = Debug;
+		};
+		030685742739D53F00D4509D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joshmcarthur.droplet.DropletUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Droplet;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		030685422739D53E00D4509D /* Build configuration list for PBXProject "Droplet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0306856A2739D53F00D4509D /* Debug */,
+				0306856B2739D53F00D4509D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0306856C2739D53F00D4509D /* Build configuration list for PBXNativeTarget "Droplet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0306856D2739D53F00D4509D /* Debug */,
+				0306856E2739D53F00D4509D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0306856F2739D53F00D4509D /* Build configuration list for PBXNativeTarget "DropletTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				030685702739D53F00D4509D /* Debug */,
+				030685712739D53F00D4509D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		030685722739D53F00D4509D /* Build configuration list for PBXNativeTarget "DropletUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				030685732739D53F00D4509D /* Debug */,
+				030685742739D53F00D4509D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		031EBBBE273A5EE700E01E12 /* XCRemoteSwiftPackageReference "soto" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/soto-project/soto";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		031EBBBF273A5EE700E01E12 /* SotoS3 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 031EBBBE273A5EE700E01E12 /* XCRemoteSwiftPackageReference "soto" */;
+			productName = SotoS3;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 0306853F2739D53E00D4509D /* Project object */;
+}
