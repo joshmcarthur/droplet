@@ -16,12 +16,9 @@
 		030685762739DA0300D4509D /* DropletAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030685752739DA0300D4509D /* DropletAppDelegate.swift */; };
 		031EBBBD273A5C0A00E01E12 /* DropletDropDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031EBBBC273A5C0A00E01E12 /* DropletDropDelegate.swift */; };
 		031EBBC0273A5EE700E01E12 /* SotoS3 in Frameworks */ = {isa = PBXBuildFile; productRef = 031EBBBF273A5EE700E01E12 /* SotoS3 */; };
-		031EBBC2273A603600E01E12 /* DropletAwsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031EBBC1273A603600E01E12 /* DropletAwsClient.swift */; };
 		031EBBC4273A728300E01E12 /* MimeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031EBBC3273A728300E01E12 /* MimeType.swift */; };
-		031EBBC6273A747D00E01E12 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 031EBBC5273A747D00E01E12 /* Config.xcconfig */; };
-		031EBBC8273DA22200E01E12 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 031EBBC7273DA22200E01E12 /* AppIcon.icns */; };
-		031EBBCA273DA23B00E01E12 /* Droplet in Resources */ = {isa = PBXBuildFile; fileRef = 031EBBC9273DA23B00E01E12 /* Droplet */; };
 		031EBBCC273DA27A00E01E12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 031EBBCB273DA27A00E01E12 /* Assets.xcassets */; };
+		031EBBCE273DA8DD00E01E12 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031EBBCD273DA8DD00E01E12 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,12 +52,9 @@
 		030685752739DA0300D4509D /* DropletAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropletAppDelegate.swift; sourceTree = "<group>"; };
 		031EBBB8273A3CEB00E01E12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		031EBBBC273A5C0A00E01E12 /* DropletDropDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropletDropDelegate.swift; sourceTree = "<group>"; };
-		031EBBC1273A603600E01E12 /* DropletAwsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropletAwsClient.swift; sourceTree = "<group>"; };
 		031EBBC3273A728300E01E12 /* MimeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MimeType.swift; sourceTree = "<group>"; };
-		031EBBC5273A747D00E01E12 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
-		031EBBC7273DA22200E01E12 /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
-		031EBBC9273DA23B00E01E12 /* Droplet */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Droplet; sourceTree = "<group>"; };
 		031EBBCB273DA27A00E01E12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		031EBBCD273DA8DD00E01E12 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +86,6 @@
 		0306853E2739D53E00D4509D = {
 			isa = PBXGroup;
 			children = (
-				031EBBC5273A747D00E01E12 /* Config.xcconfig */,
 				030685492739D53E00D4509D /* Droplet */,
 				0306855B2739D53F00D4509D /* DropletTests */,
 				030685652739D53F00D4509D /* DropletUITests */,
@@ -114,17 +107,15 @@
 			isa = PBXGroup;
 			children = (
 				031EBBCB273DA27A00E01E12 /* Assets.xcassets */,
-				031EBBC7273DA22200E01E12 /* AppIcon.icns */,
 				031EBBB8273A3CEB00E01E12 /* Info.plist */,
 				0306854A2739D53E00D4509D /* DropletApp.swift */,
 				030685752739DA0300D4509D /* DropletAppDelegate.swift */,
 				031EBBC3273A728300E01E12 /* MimeType.swift */,
-				031EBBC1273A603600E01E12 /* DropletAwsClient.swift */,
 				031EBBBC273A5C0A00E01E12 /* DropletDropDelegate.swift */,
 				0306854C2739D53E00D4509D /* ContentView.swift */,
-				031EBBC9273DA23B00E01E12 /* Droplet */,
 				030685502739D53F00D4509D /* Preview Content */,
 				030685532739D53F00D4509D /* Droplet.entitlements */,
+				031EBBCD273DA8DD00E01E12 /* SettingsView.swift */,
 			);
 			path = Droplet;
 			sourceTree = "<group>";
@@ -265,9 +256,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				030685522739D53F00D4509D /* Preview Assets.xcassets in Resources */,
-				031EBBC8273DA22200E01E12 /* AppIcon.icns in Resources */,
-				031EBBC6273A747D00E01E12 /* Config.xcconfig in Resources */,
-				031EBBCA273DA23B00E01E12 /* Droplet in Resources */,
 				031EBBCC273DA27A00E01E12 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,10 +281,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				031EBBCE273DA8DD00E01E12 /* SettingsView.swift in Sources */,
 				0306854D2739D53E00D4509D /* ContentView.swift in Sources */,
 				0306854B2739D53E00D4509D /* DropletApp.swift in Sources */,
 				031EBBBD273A5C0A00E01E12 /* DropletDropDelegate.swift in Sources */,
-				031EBBC2273A603600E01E12 /* DropletAwsClient.swift in Sources */,
 				030685762739DA0300D4509D /* DropletAppDelegate.swift in Sources */,
 				031EBBC4273A728300E01E12 /* MimeType.swift in Sources */,
 			);
@@ -337,7 +325,6 @@
 /* Begin XCBuildConfiguration section */
 		0306856A2739D53F00D4509D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 031EBBC5273A747D00E01E12 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
