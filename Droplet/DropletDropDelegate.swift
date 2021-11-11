@@ -14,15 +14,13 @@ struct DropletDropDelegate : DropDelegate {
         return info.hasItemsConforming(to: ["public.file-url"])
     }
     
-    func dropEntered(info: DropInfo) {
-        self.active = true
-    }
     
     func performDrop(info: DropInfo) -> Bool {
         if let item = info.itemProviders(for: ["public.file-url"]).first {
                         item.loadItem(forTypeIdentifier: "public.file-url", options: nil) { (urlData, error) in
                             DispatchQueue.main.async {
                                 if let urlData = urlData as? Data {
+                                    self.active = true
                                     self.fileUrl = NSURL(absoluteURLWithDataRepresentation: urlData, relativeTo: nil) as URL
                                     let request = S3.CreateMultipartUploadRequest(bucket: AWS_BUCKET,
                                                                                   contentDisposition: "inline",
@@ -36,10 +34,11 @@ struct DropletDropDelegate : DropDelegate {
                                         on: nil,
                                         threadPoolProvider: .createNew
                                     ) { progress in
-                                        print(progress)
+                                        self.uploadProgress = progress
                                     }
                                     
                                     multipartUploadRequest.whenFailure { error in
+                                        self.active = false;
                                         print(error)
                                     }
                                     
@@ -53,9 +52,11 @@ struct DropletDropDelegate : DropDelegate {
                                                     httpMethod: .GET,
                                                     expires: AWS_PRESIGNED_OBJECT_EXPIRY
                                                 ).wait()
+                                                
                                                 let pasteboard = NSPasteboard.general
                                                 pasteboard.clearContents()
                                                 pasteboard.setString(self.signedUrl!.absoluteString, forType: .string)
+                                                self.active = false
                                             }
                                             catch {
                                                 print("Could not generated presigned URL for \(location)")
@@ -77,5 +78,6 @@ struct DropletDropDelegate : DropDelegate {
     @Binding var fileUrl: URL?
     @Binding var signedUrl: URL?
     @Binding var active: Bool
+    @Binding var uploadProgress: Double
 }
 

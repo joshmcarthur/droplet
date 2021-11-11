@@ -11,16 +11,27 @@ struct DroppableArea: View {
     @State private var fileUrl: URL?
     @State private var signedUrl: URL?
     @State private var active = false
+    @State private var uploadProgress = 0.0;
+    
     
 
     var body: some View {
         
-        let dropDelegate = DropletDropDelegate(fileUrl: $fileUrl, signedUrl: $signedUrl, active: $active)
+        let dropDelegate = DropletDropDelegate(fileUrl: $fileUrl, signedUrl: $signedUrl, active: $active, uploadProgress: $uploadProgress)
         
-        Text(self.signedUrl != nil ? self.signedUrl!.absoluteString : "Hello, world!")
-            .background(self.active ? .red : .teal)
-            .padding()
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        VStack {
+            Image("HeroImage")
+            if self.active {
+                ProgressView(value: uploadProgress, total: 1.0).padding()
+            } else if (self.signedUrl != nil) {
+                Link("Open link in browser", destination: self.signedUrl!).padding()
+                Button("Reset", action: { self.signedUrl = nil }).buttonStyle(.borderless)
+            } else {
+                Text("Drop file here to upload").padding()
+                Button("Quit", action: { exit(0) }).buttonStyle(.borderless)
+            }
+            
+        }.frame(maxWidth: .infinity, maxHeight: .infinity)
     .onDrop(of: ["public.file-url"], delegate: dropDelegate)
     }
 }
