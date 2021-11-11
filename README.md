@@ -1,3 +1,8 @@
+
+<p align="center">
+  <img width="128" height="128" src="https://github.com/joshmcarthur/droplet/blob/master/images/icon_128x128@2x.png?raw=true" alt="Droplet icon">
+</p>
+
 # Droplet
 
 ![Demo](demo.gif)
