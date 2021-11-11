@@ -24,7 +24,7 @@ class DropletAppDelegate: NSObject, NSApplicationDelegate {
         self.statusBarItem = NSStatusBar.system.statusItem(withLength: CGFloat(NSStatusItem.variableLength))
         
         if let button = self.statusBarItem.button {
-            button.image = NSImage(named: "Icon")
+            button.image = NSImage(named: "MenubarIcon")
             button.action = #selector(togglePopover(_:))
         }
     }

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0306854B2739D53E00D4509D /* DropletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306854A2739D53E00D4509D /* DropletApp.swift */; };
 		0306854D2739D53E00D4509D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306854C2739D53E00D4509D /* ContentView.swift */; };
-		0306854F2739D53F00D4509D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0306854E2739D53F00D4509D /* Assets.xcassets */; };
 		030685522739D53F00D4509D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030685512739D53F00D4509D /* Preview Assets.xcassets */; };
 		0306855D2739D53F00D4509D /* DropletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306855C2739D53F00D4509D /* DropletTests.swift */; };
 		030685672739D53F00D4509D /* DropletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030685662739D53F00D4509D /* DropletUITests.swift */; };
@@ -20,6 +19,9 @@
 		031EBBC2273A603600E01E12 /* DropletAwsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031EBBC1273A603600E01E12 /* DropletAwsClient.swift */; };
 		031EBBC4273A728300E01E12 /* MimeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031EBBC3273A728300E01E12 /* MimeType.swift */; };
 		031EBBC6273A747D00E01E12 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 031EBBC5273A747D00E01E12 /* Config.xcconfig */; };
+		031EBBC8273DA22200E01E12 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 031EBBC7273DA22200E01E12 /* AppIcon.icns */; };
+		031EBBCA273DA23B00E01E12 /* Droplet in Resources */ = {isa = PBXBuildFile; fileRef = 031EBBC9273DA23B00E01E12 /* Droplet */; };
+		031EBBCC273DA27A00E01E12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 031EBBCB273DA27A00E01E12 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +45,6 @@
 		030685472739D53E00D4509D /* Droplet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Droplet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0306854A2739D53E00D4509D /* DropletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropletApp.swift; sourceTree = "<group>"; };
 		0306854C2739D53E00D4509D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		0306854E2739D53F00D4509D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		030685512739D53F00D4509D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		030685532739D53F00D4509D /* Droplet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Droplet.entitlements; sourceTree = "<group>"; };
 		030685582739D53F00D4509D /* DropletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DropletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +58,9 @@
 		031EBBC1273A603600E01E12 /* DropletAwsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropletAwsClient.swift; sourceTree = "<group>"; };
 		031EBBC3273A728300E01E12 /* MimeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MimeType.swift; sourceTree = "<group>"; };
 		031EBBC5273A747D00E01E12 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		031EBBC7273DA22200E01E12 /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
+		031EBBC9273DA23B00E01E12 /* Droplet */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Droplet; sourceTree = "<group>"; };
+		031EBBCB273DA27A00E01E12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 		030685492739D53E00D4509D /* Droplet */ = {
 			isa = PBXGroup;
 			children = (
+				031EBBCB273DA27A00E01E12 /* Assets.xcassets */,
+				031EBBC7273DA22200E01E12 /* AppIcon.icns */,
 				031EBBB8273A3CEB00E01E12 /* Info.plist */,
 				0306854A2739D53E00D4509D /* DropletApp.swift */,
 				030685752739DA0300D4509D /* DropletAppDelegate.swift */,
@@ -116,7 +122,7 @@
 				031EBBC1273A603600E01E12 /* DropletAwsClient.swift */,
 				031EBBBC273A5C0A00E01E12 /* DropletDropDelegate.swift */,
 				0306854C2739D53E00D4509D /* ContentView.swift */,
-				0306854E2739D53F00D4509D /* Assets.xcassets */,
+				031EBBC9273DA23B00E01E12 /* Droplet */,
 				030685502739D53F00D4509D /* Preview Content */,
 				030685532739D53F00D4509D /* Droplet.entitlements */,
 			);
@@ -259,8 +265,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				030685522739D53F00D4509D /* Preview Assets.xcassets in Resources */,
+				031EBBC8273DA22200E01E12 /* AppIcon.icns in Resources */,
 				031EBBC6273A747D00E01E12 /* Config.xcconfig in Resources */,
-				0306854F2739D53F00D4509D /* Assets.xcassets in Resources */,
+				031EBBCA273DA23B00E01E12 /* Droplet in Resources */,
+				031EBBCC273DA27A00E01E12 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +458,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = Droplet/Droplet.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -476,6 +485,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = Droplet/Droplet.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
