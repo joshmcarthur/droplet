@@ -25,13 +25,19 @@ struct DroppableArea: View {
                 ProgressView(value: uploadProgress, total: 1.0).padding()
             } else if (self.signedUrl != nil) {
                 Link("Open link in browser", destination: self.signedUrl!).padding()
+                Spacer()
                 Button("Reset", action: { self.signedUrl = nil }).buttonStyle(.borderless)
             } else {
                 Text("Drop file here to upload").padding()
+                Spacer()
+                Button("Settings", action: {
+                    NSApp.sendAction(#selector(DropletAppDelegate.showSettings), to: nil, from:nil)
+
+                })
                 Button("Quit", action: { exit(0) }).buttonStyle(.borderless)
             }
             
-        }.frame(maxWidth: .infinity, maxHeight: .infinity)
+        }.frame(maxWidth: .infinity, maxHeight: .infinity).padding().fixedSize()
     .onDrop(of: ["public.file-url"], delegate: dropDelegate)
     }
 }
