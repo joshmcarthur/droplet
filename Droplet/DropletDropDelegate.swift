@@ -8,6 +8,7 @@
 import SwiftUI
 import SotoS3
 import AVFoundation
+import UserNotifications
 
 struct DropletDropDelegate : DropDelegate {
     @AppStorage("awsAccessKeyId") var awsAccessKeyId = ""
@@ -23,6 +24,9 @@ struct DropletDropDelegate : DropDelegate {
     
     
     func performDrop(info: DropInfo) -> Bool {
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.requestAuthorization(options: [.alert]) { granted, error in }
+        
         let awsClient = AWSClient(
             credentialProvider: .static(accessKeyId: awsAccessKeyId, secretAccessKey: awsSecretAccessKey),
             httpClientProvider: .createNew
@@ -34,10 +38,11 @@ struct DropletDropDelegate : DropDelegate {
                                 if let urlData = urlData as? Data {
                                     self.active = true
                                     self.fileUrl = NSURL(absoluteURLWithDataRepresentation: urlData, relativeTo: nil) as URL
+                                    let key = NSUUID().uuidString
                                     let request = S3.CreateMultipartUploadRequest(bucket: awsBucketName,
                                                                                   contentDisposition: "inline",
                                                                                   contentType: self.fileUrl!.mimeType(),
-                                                                                  key: NSUUID().uuidString)
+                                                                                  key: key)
                                     let multipartUploadRequest = s3.multipartUpload(
                                         request,
                                         partSize: 5*1024*1024,
@@ -74,6 +79,20 @@ struct DropletDropDelegate : DropDelegate {
                                                 let pasteboard = NSPasteboard.general
                                                 pasteboard.clearContents()
                                                 pasteboard.setString(self.signedUrl!.absoluteString, forType: .string)
+                                                
+                                                notificationCenter.getNotificationSettings { settings in
+                                                    guard ((settings.authorizationStatus == .authorized) ||
+                                                           (settings.authorizationStatus == .provisional)) && settings.alertSetting == .enabled
+                                                    else { return }
+
+                                                    let content = UNMutableNotificationContent()
+                                                    content.title = "Upload finished"
+                                                    content.body = "Presigned URL has been copied to the clipboard"
+                                                    
+                                                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+                                                    let request = UNNotificationRequest(identifier: key, content: content, trigger: trigger)
+                                                    notificationCenter.add(request);
+                                                }
                                                 try! awsClient.syncShutdown()
                                                 self.active = false
                                             }
