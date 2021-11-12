@@ -4,7 +4,7 @@
   <h1 align="center">Droplet</h1>
 </p>
 
-![Demo](demo.gif)
+![Demo](images/demo.gif)
 
 Droplet is a very small SwiftUI application that runs in the menubar and allows
 a file to be dropped onto the popover. When a file is dropped, it will be
