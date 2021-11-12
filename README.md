@@ -11,21 +11,20 @@ a file to be dropped onto the popover. When a file is dropped, it will be
 uploaded to an S3 bucket that you configure, a presigned URL generated and
 copied to your clipboard.
 
-### What is working
+### Features
 
 * Dropping files into the popover
 * Uploading to S3 with the correct content type and disposition for inline viewing
 * Generating a presigned URL
 * Copying the presigned URL automatically to the clipboard
-* A settings UI for specifying access key ID, secret access key, region and
-  bucket, and default expiration time.
+* A settings UI for specifying access key ID, secret access key, region,
+  bucket, and default expiration time (up to 7 days)
 * An UI for uploading files
 * 'Click to copy' presigned URL display
 * Ability to reset the upload
-* Ability to specify a custom expiration time
-
-### What is planned
-
 * Show a location notification when the file has been uploaded
 
+### Potential features
+
+* Ability to specify a custom expiration time for an upload
 
